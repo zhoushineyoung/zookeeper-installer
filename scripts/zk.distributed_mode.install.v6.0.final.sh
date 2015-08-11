@@ -1,4 +1,5 @@
 #!/bin/bash
+read -p "Please Enter Current Installing Zookeeper Version :" ZK_V
 read -p "Please Enter Your Servers ip_list(separate by \",\" with no whitespace) :" IP_LIST
 read -p "Please Enter The port:" PORT ;
 
@@ -124,5 +125,6 @@ function MakeServerList()
 # for node_index in ${ZK_NODES_LIST[@]}
 # do
 # 	InstallZKNode "3.4.5" ${node_index} $length
-InstallZKNode "3.4.5"
+#InstallZKNode "3.4.5"
+InstallZKNode $ZK_V
 # done
